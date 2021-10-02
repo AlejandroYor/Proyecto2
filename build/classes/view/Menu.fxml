@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="467.0" prefWidth="617.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MenuController">
+   <children>
+      <ImageView depthTest="DISABLE" fitHeight="467.0" fitWidth="638.0" layoutY="25.0" preserveRatio="true" smooth="false">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+         <image>
+            <Image url="file:/C:/Users/Alejandro/Desktop/parqueo-motos-4.jpg" />
+         </image>
+         <effect>
+            <InnerShadow choke="0.35" height="130.47" radius="55.8375" width="94.88" />
+         </effect>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="140.0" layoutY="34.0" prefHeight="53.0" prefWidth="318.0" text="MENU DE OPCIONES">
+         <font>
+            <Font name="Segoe UI Bold" size="25.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.4722222222222222" centerY="0.3" radius="0.5">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="0.7797833681106567" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </textFill></Label>
+      <Button layoutX="18.0" layoutY="170.0" mnemonicParsing="false" onAction="#agregarMenuCarro" prefHeight="63.0" prefWidth="151.0" text="Agregar Carro" textAlignment="CENTER">
+         <font>
+            <Font size="15.0" />
+         </font></Button>
+      <Button fx:id="btnSalir" layoutX="18.0" layoutY="387.0" mnemonicParsing="false" onAction="#salirMenu" prefHeight="43.0" prefWidth="477.0" text="Salir" />
+      <Button layoutX="181.0" layoutY="170.0" mnemonicParsing="false" onAction="#agregarMenuMoto" prefHeight="63.0" prefWidth="151.0" text="Agregar Moto" textAlignment="CENTER">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="18.0" layoutY="243.0" mnemonicParsing="false" onAction="#sacarMenuCarro" prefHeight="63.0" prefWidth="151.0" text="Sacar Carro" textAlignment="CENTER">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <TextField fx:id="txtTarifaCarro" layoutX="18.0" layoutY="101.0" promptText="Tarifa Carro" />
+      <Button fx:id="btnGuardar" layoutX="506.0" layoutY="101.0" mnemonicParsing="false" onAction="#guardarTarifa" prefHeight="329.0" prefWidth="83.0" text="Guardar" textAlignment="CENTER">
+         <font>
+            <Font name="Segoe UI Symbol" size="12.0" />
+         </font></Button>
+      <TextField fx:id="txtTarifaMoto" layoutX="182.0" layoutY="101.0" promptText="Tarifa Moto" />
+      <TextField fx:id="txtEspacioCarro" layoutX="19.0" layoutY="134.0" promptText="Espacio Carro" />
+      <TextField fx:id="txtEspacioMoto" layoutX="182.0" layoutY="134.0" promptText="Espacio Moto" />
+      <TextField fx:id="txtTarifaCamion" layoutX="344.0" layoutY="101.0" promptText="Tarifa Camion" />
+      <TextField fx:id="txtEspacioCamion" layoutX="344.0" layoutY="134.0" promptText="Espacio Camion" />
+      <Button layoutX="182.0" layoutY="243.0" mnemonicParsing="false" onAction="#sacarMenuMoto" prefHeight="63.0" prefWidth="151.0" text="Sacar Moto" textAlignment="CENTER">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="343.0" layoutY="170.0" mnemonicParsing="false" onAction="#agregarMenuCamion" prefHeight="63.0" prefWidth="151.0" text="Agregar Camion" textAlignment="CENTER">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="343.0" layoutY="243.0" mnemonicParsing="false" onAction="#sacarMenuCamion" prefHeight="63.0" prefWidth="151.0" text="Sacar Camion" textAlignment="CENTER">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="17.0" layoutY="314.0" mnemonicParsing="false" onAction="#agregarMenuConsulta1" prefHeight="63.0" prefWidth="232.0" text="Consultar al servidor el total ingresado" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="262.0" layoutY="314.0" mnemonicParsing="false" onAction="#agregarMenuConsulta2" prefHeight="63.0" prefWidth="232.0" text="Consultar al servidor el espacio de los parqueos" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <MenuBar layoutX="6.0" layoutY="7.0" prefHeight="25.0" prefWidth="215.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Cerrar" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+   <cursor>
+      <Cursor fx:constant="HAND" />
+   </cursor>
+</AnchorPane>
